@@ -13,7 +13,7 @@ public class question_32 {
 
     static String PrintMinNumber(int[] numbers) {
         //按照两个数组拼接后的大小排在前面，这样得到的就是最小的
-        //例如321 21比较，32121<21321，所以321排在21前面，最后直接拼接起来就是最小的
+        //例如321 21比较，32121>21321，所以21排在321前面，最后直接拼接起来就是最小的
         return Arrays.stream(numbers).boxed().sorted((a, b) -> {
             String m = String.valueOf(a);
             String n = String.valueOf(b);
