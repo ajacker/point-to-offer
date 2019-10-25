@@ -17,28 +17,28 @@ public class question_47 {
     /**
      * 求1+2+3+...+n
      * 要求不能使用乘除法、for、while、if、else、switch、case等关键字及条件判断语句（A?B:C）
+     * 使用逻辑短路来终止语句
      *
      * @param n n
      * @return 1+2+3+...+n
      */
     static int Sum_Solution(int n) {
-        if (n == 1) {
-            return 1;
-        }
-        return Sum_Solution(n - 1) + n;
+        int sum = n;
+        boolean ans = (n == 1) || ((sum += Sum_Solution(n - 1)) > 0);
+        return sum;
     }
 
     /**
      * 尾递归优化
+     * 使用逻辑短路来终止语句
      *
      * @param n
      * @param sum
      * @return
      */
     static int tailSum(int n, int sum) {
-        if (n == 1) {
-            return sum + n;
-        }
-        return tailSum(n - 1, sum + n);
+        int result = sum + n;
+        boolean ans = (n == 1) || ((result = tailSum(n - 1, result)) > 0);
+        return result;
     }
 }
