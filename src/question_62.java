@@ -1,9 +1,7 @@
-
-
 /**
  * @author ajacker
  * @date 2019/10/26 15:07
- * @see <a href="二叉搜索树的第k个节点">https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a    </a>
+ * @see <a href="二叉搜索树的第k个节点">https://www.nowcoder.com/practice/ef068f602dde4d28aab2b210e859150a</a>
  */
 public class question_62 {
     static int times = 0;
